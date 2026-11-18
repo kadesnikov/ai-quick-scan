@@ -2,6 +2,15 @@
 
 AI & Process Automation Quick Scan — Claude skill for auditing small and mid-size businesses: pre-call research, CEO call prep, maturity and process audit, AI use cases, client report.
 
+## Install (Claude desktop app or claude.ai)
+
+1. Open **Customize** in the left sidebar → **Plugins** tab.
+2. Click **Add** → **Add marketplace**, choose the GitHub repository option.
+3. Paste `https://github.com/kadesnikov/ai-quick-scan` (or `kadesnikov/ai-quick-scan`).
+4. Open the new marketplace and click **Add** on the **ai-quick-scan** plugin.
+
+The plugin is saved to your account and also shows up in Cowork and Claude Code.
+
 ## Install (Claude Code)
 
 ```
