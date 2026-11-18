@@ -1,0 +1,13 @@
+{
+  "name": "ai-quick-scan",
+  "owner": {
+    "name": "kadesnikov"
+  },
+  "plugins": [
+    {
+      "name": "ai-quick-scan",
+      "source": "./plugins/ai-quick-scan",
+      "description": "AI & Process Automation Quick Scan for small and mid-size businesses: pre-call research, CEO call prep, maturity and process audit, AI use cases, client report."
+    }
+  ]
+}
