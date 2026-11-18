@@ -23,6 +23,8 @@ If an earlier stage was done in this conversation or a client doc already exists
 
 ## Where the work lives
 
+If the team uses the AI Quick Scan Workbench artifact and you have artifact database tools (db_get / db_write), the input may name an artifact URL and a document path such as `audits/<id>`. Read that document first, then update only the field you were asked to fill (usually `dossier`) plus `updatedAt` (current time in ms); never overwrite other fields. Without those tools, output the result in chat for the user to paste.
+
 Create one doc per client (the Docs artifact type if available, otherwise a markdown file), titled `Quick Scan · <Company>`, with sections: Dossier, Hypotheses, Call questions, Audit, Use cases, Report notes. Fill sections as each stage completes. If the user keeps a shared constructor doc (methodology, industry modules, case library), read it first and reuse its modules and cases; after the audit, list new cases or questions worth adding back to it (and to the module library below, via a pull request to this repo).
 
 ## Stage 1 - Pre-call research (target: 1-2 h of analyst work, ~30 min for you)
@@ -69,6 +71,13 @@ Output: a dossier table (field / fact / source), 3-5 "signals for the audit", an
 
 Read the transcript/notes fully. Extract facts into the capture table; mark anything estimated.
 
+### 3.0 Process gate (do this first)
+Quick Scans are often free and done for references, so do not spend a full audit on a business with nothing to automate. Decide:
+- **full** - 2+ recurring processes with real volume (roughly 20+ h/month of manual work in total): run the full audit below.
+- **light** - processes exist but are small or irregular: skip PEMM, propose 1-3 simple solutions (AI replies to clients, email triage, document templates) and a 1-2 page offer.
+- **none** - no recurring processes: say so honestly, offer at most one simple solution or "come back when you grow", and write no report.
+State the verdict and the reason with numbers from the call.
+
 ### 3.1 Company maturity
 - MIT CISR stage 1-4, with the evidence.
 - 5 readiness pillars, each 1-5 with one line of evidence: Strategy & use cases, Data, Technology & integrations, People & culture, Governance & risk (GDPR, EU AI Act risk class of planned cases).
@@ -96,7 +105,7 @@ For each candidate:
 
 Rank, pick 1-2 pilots (quick wins with clear KPI), and say plainly what should NOT be automated now and why. Do not bend findings toward what the agency sells.
 
-## Stage 5 - Client report (8-12 pages)
+## Stage 5 - Client report (8-12 pages; for a "light" verdict a 1-2 page offer, for "none" no report)
 
 1. One-page summary: maturity stage, top 3 opportunities with EUR and hours, recommended pilot
 2. Company and market profile (from the dossier) and what competitors already do with AI
